@@ -1,0 +1,17 @@
+{
+  "name": "blood-donation-portal",
+  "version": "1.0.0",
+  "description": "The Blood Donation Portal is a web application designed to facilitate blood donation and requests. It allows potential donors to submit their information and enables users to request blood for patients in need. The portal features a modern and professional layout, ensuring a user-friendly experience.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "express": "^5.1.0"
+  }
+}

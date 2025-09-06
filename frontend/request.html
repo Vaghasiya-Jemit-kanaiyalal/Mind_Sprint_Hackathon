@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Blood</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+     
+        #mobile {
+            width: 100%;
+            padding: 12px 10px;
+            font-size: 1.1rem;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            margin-bottom: 18px;
+            box-sizing: border-box;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Blood Donation Portal</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="donor.html">Be a Donor</a></li>
+                <li><a href="request.html">Request Blood</a></li>
+                <li><a href="blood_donors.html">Blood Donors</a></li>
+                <li><a href="urgent.html">Urgent Requests</a></li>
+                <li><a href="requirements.html">Requirements</a></li>
+                <li><a href="search.html">Search</a></li>
+                <li><a href="help.html">Help</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <img src="../images/request.jpg" alt="Hero Image" class="hero-image">
+            <div class="hero-content">
+                <h2>Request Blood - Save a Life</h2>
+                <p>In times of need, every second counts. Submit your blood request and connect with willing donors in your area.</p>
+                <blockquote>"The gift of blood is the gift of life. There is no substitute for human blood." - Unknown</blockquote>
+            </div>
+        </section>
+
+        <section class="motivational-banner">
+            <h2>Your Request Can Save Lives!</h2>
+        </section>
+
+        <form id="requestForm" method="POST" action="#">
+            <h2>Request Blood</h2>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="patientType">Patient Type:</label>
+                <select id="patientType" name="patientType" required>
+                    <option value="">Select Type</option>
+                    <option value="urgent">Urgent</option>
+                    <option value="normal">Normal</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="bloodGroup">Blood Group:</label>
+                <input type="text" id="bloodGroup" name="bloodGroup" required placeholder="e.g. A+, O-">
+            </div>
+
+            <div class="form-group">
+                <label for="units">Units:</label>
+                <input type="number" id="units" name="units" min="1" required>
+            </div>
+
+            <div class="form-group">
+                <label for="hospital">Hospital:</label>
+                <input type="text" id="hospital" name="hospital" required>
+            </div>
+
+            <div class="form-group">
+                <label for="area">Area:</label>
+                <input type="text" id="area" name="area" required>
+            </div>
+
+            <div class="form-group">
+                <label for="mobile">Mobile:</label>
+                <input type="tel" id="mobile" name="mobile" required pattern="[0-9]{10}" placeholder="10-digit number">
+            </div>
+
+            <button type="submit">Submit Request</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Blood Donation Portal. All rights reserved.</p>
+    </footer>
+
+    <script src="js/request.js"></script>
+</body>
+</html>

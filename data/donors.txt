@@ -1,0 +1,7 @@
+Rajesh Kumar, O+, City Hospital, Andheri, 9876543210
+Sneha Sharma, A-, General Hospital, Connaught Place, 9123456780
+Anita Singh, B+, Community Hospital, Vashi, 9988776655
+Rohit Mehta, AB-, Regional Hospital, Bandra, 9122334455
+misha Patel, A+, Shree Hospital, Surat, 9856202145
+Jemit Patel, A+, Shree Hospital, Surat, 9023552524
+Krishna Reddy, B-, Vesu Hospital, Surat, 9601402279

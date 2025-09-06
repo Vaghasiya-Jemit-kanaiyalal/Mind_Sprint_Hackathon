@@ -1,0 +1,328 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be a Donor</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/donor.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Blood Donation Portal</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blood_donors.html">Donors</a></li>
+                <li><a href="request.html">Request Blood</a></li>
+                <li><a href="help.html">Help</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <img src="../images/donorbcg.jpg" alt="Be a Donor" class="hero-image">
+            <div class="hero-content" >
+                <h2>Be a Donor - Become a Hero</h2>
+                <p>Your blood donation can save lives. Register as a donor and make a difference in someone's life today.</p>
+                <blockquote >
+                    "A single pint can save three lives, a single gesture can create a million smiles."
+                </blockquote>
+            </div>
+            <div style="clear: both;"></div>
+        </section>
+
+        <section class="donor-form">
+            <div class="form-bg"></div>
+            <form id="donorForm" method="POST" action="/submit-donor">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="bloodGroup">Blood Group:</label>
+                <select id="bloodGroup" name="bloodGroup" required>
+                    <option value="">Select Blood Group</option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                </select>
+
+                <label for="hospital">Hospital:</label>
+                <input type="text" id="hospital" name="hospital" required>
+
+                <label for="area">Area:</label>
+                <input type="text" id="area" name="area" required>
+
+                <label for="mobile">Mobile:</label>
+                <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" required>
+
+                <button type="submit">Submit</button>
+            </form>
+            <div id="thankYouMessage" style="display: none; text-align: center; margin-top: 20px; color: #4caf50; font-weight: bold;">
+                Thank you for registering as a donor! Redirecting...
+            </div>
+        </section>
+        <style>
+            .donor-form {
+                position: relative;
+                z-index: 1;
+                max-width: 500px;
+                margin: 40px auto;
+                padding: 40px 30px;
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            }
+            .donor-form .form-bg {
+                content: "";
+                position: absolute;
+                top: 0; left: 0; right: 0; bottom: 0;
+                background: url('images/donorbcg.jpg') no-repeat center center/cover;
+                opacity: 0.18;
+                z-index: -1;
+            }
+            .donor-form form {
+                position: relative;
+
+                z-index: 1;
+                background: none !important;
+                padding: 30px 20px;
+                border-radius: 10px;
+            }
+            body {
+                background: #fafafa;
+            }
+            main, header, footer {
+                position: relative;
+                z-index: 1;
+            }
+            /* Motivational banner styling */
+            .motivational-banner {
+                /* background: rgba(255,255,255,0.15); */
+                text-align: center;
+                font-size: 2.5rem;
+                font-weight: 900;
+                color: #d32f2f;
+                letter-spacing: 2px;
+                text-shadow: 0 2px 16px #fff, 0 0 8px #d32f2f;
+              
+            }
+        
+            #mobile {
+                width: 100%;
+                padding: 12px 10px;
+                font-size: 1.1rem;
+                border: 1px solid #ccc;
+                border-radius: 6px;
+                margin-bottom: 18px;
+                box-sizing: border-box;
+            }
+        </style>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Blood Donation Portal. All rights reserved.</p>
+    </footer>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be a Donor</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/donor.js" defer></script>
+    <style>
+        body {
+            background: #fafafa;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #d32f2f;
+            color: white;
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 30px 0;
+        }
+        .hero-image {
+            max-width: 400px;
+            margin-right: 20px;
+            border-radius: 10px;
+        }
+        .hero-content {
+            max-width: 500px;
+        }
+        .hero-content h2 {
+            color: #d32f2f;
+        }
+        .hero-content blockquote {
+            font-style: italic;
+            color: #555;
+            margin-top: 15px;
+        }
+
+        /* Donor Form Styles */
+        .donor-form {
+            position: relative;
+            z-index: 1;
+            max-width: 500px;
+            margin: 40px auto;
+            padding: 40px 30px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            background: rgba(255, 255, 255, 0.9); /* slight white overlay for readability */
+        }
+
+        .donor-form .form-bg {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: url('../images/donorbcg.jpg') no-repeat center center;
+            background-size: cover;
+            opacity: 0.1; /* low opacity */
+            z-index: 0;
+        }
+
+        .donor-form form {
+            position: relative;
+            z-index: 1;
+            background: transparent;
+        }
+
+        .donor-form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .donor-form input, .donor-form select {
+            width: 100%;
+            padding: 12px 10px;
+            font-size: 1.1rem;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            margin-bottom: 18px;
+            box-sizing: border-box;
+        }
+
+        .donor-form button {
+            width: 100%;
+            padding: 12px;
+            background-color: #d32f2f;
+            color: white;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .donor-form button:hover {
+            background-color: #b71c1c;
+        }
+
+        #thankYouMessage {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+            color: #4caf50;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px 0;
+            background-color: #d32f2f;
+            color: white;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Blood Donation Portal</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blood_donors.html">Donors</a></li>
+                <li><a href="request.html">Request Blood</a></li>
+                <li><a href="help.html">Help</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <img src="../images/donorbcg.jpg" alt="Be a Donor" class="hero-image">
+            <div class="hero-content">
+                <h2>Be a Donor - Become a Hero</h2>
+                <p>Your blood donation can save lives. Register as a donor and make a difference in someone's life today.</p>
+                <blockquote>"A single pint can save three lives, a single gesture can create a million smiles."</blockquote>
+            </div>
+            <div style="clear: both;"></div>
+        </section>
+
+        <section class="donor-form">
+            <div class="form-bg"></div>
+            <form id="donorForm" method="POST" action="/submit-donor">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="bloodGroup">Blood Group:</label>
+                <select id="bloodGroup" name="bloodGroup" required>
+                    <option value="">Select Blood Group</option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                </select>
+
+                <label for="hospital">Hospital:</label>
+                <input type="text" id="hospital" name="hospital" required>
+
+                <label for="area">Area:</label>
+                <input type="text" id="area" name="area" required>
+
+                <label for="mobile">Mobile:</label>
+                <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" required>
+
+                <button type="submit">Submit</button>
+            </form>
+            <div id="thankYouMessage">Thank you for registering as a donor! Redirecting...</div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Blood Donation Portal. All rights reserved.</p>
+    </footer>
+</body>
+</html>
